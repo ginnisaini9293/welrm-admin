@@ -25,7 +25,7 @@ import {
 } from '@coreui/react'
 import api from 'src/utils/api'
 
-const Hotels = () => {
+const Customers = () => {
   const [hotels, setHotels] = useState([])
   const [search, setSearch] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
@@ -79,6 +79,46 @@ const Hotels = () => {
     [getHotels],
   )
 
+  // const StaticBackdrop = (hotel_id, status) => {
+  //   const [visible, setVisible] = useState(false)
+
+  //   var btn_text = ''
+  //   var status_val = ''
+  //   var alert_text = ''
+  //   console.log('..app', hotel_id, status)
+  //   if (status == 'approved') {
+  //     console.log('if states')
+  //     btn_text = 'Unapprove'
+  //     alert_text = 'Are you sure, you want to unapprove this hotel?'
+  //     status_val = 0
+  //   } else if (status == 'unapproved') {
+  //     console.log('else states')
+
+  //     btn_text = 'Approve'
+  //     alert_text = 'Are you sure, you want to approve this hotel?'
+  //     status_val = 1
+  //   }
+  //   return (
+  //     <>
+  //       <CButton onClick={() => setVisible(!visible)}>{btn_text}</CButton>
+  //       <CModal backdrop={false} visible={visible} onClose={() => setVisible(false)}>
+  //         <CModalHeader>
+  //           <CModalTitdisapproveModalIdle>Change Approval Status</CModalTitle>
+  //         </CModalHeader>
+  //         <CModalBody>{alert_text}</CModalBody>
+  //         <CModalFooter>
+  //           <CButton color="secondary" onClick={() => setVisible(false)}>
+  //             Close
+  //           </CButton>
+  //           <CButton color="primary" onClick={() => changeStatus(hotel_id, status_val)}>
+  //             Save changes
+  //           </CButton>
+  //         </CModalFooter>
+  //       </CModal>
+  //     </>
+  //   )
+  // }
+
   const ApproveModal = useCallback(() => {
     return (
       <CModal
@@ -93,7 +133,7 @@ const Hotels = () => {
           <CModalTitle>Change Approval Status</CModalTitle>
         </CModalHeader>
         <CModalBody>{`Do you want to ${
-          approveModalId ? `Unapprove` : `Approve`
+          approveModalId ? `disapprove` : `approve`
         } this hotel?`}</CModalBody>
         <CModalFooter>
           <CButton
@@ -173,7 +213,7 @@ const Hotels = () => {
                       <CTableDataCell>
                         <CButton
                           onClick={() => {
-                            if (hotel.is_approved !== 'Approved') {
+                            if (hotel.is_approved !== 'approved') {
                               setDisapproveModalId(hotel.id)
                               setApproveModalId(null)
                             } else {
@@ -186,7 +226,7 @@ const Hotels = () => {
                           {processingId === hotel.id ? (
                             <CSpinner size="sm" />
                           ) : (
-                            <>{hotel.is_approved === 'Approved' ? 'Unapprove' : 'Approve'}</>
+                            <>{hotel.is_approved === 'approved' ? 'Unapprove' : 'Approve'}</>
                           )}
                         </CButton>
                       </CTableDataCell>
@@ -236,4 +276,4 @@ const Hotels = () => {
   )
 }
 
-export default Hotels
+export default Customers

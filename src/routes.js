@@ -20,6 +20,7 @@ const Popovers = React.lazy(() => import('./views/base/popovers/Popovers'))
 const Progress = React.lazy(() => import('./views/base/progress/Progress'))
 const Spinners = React.lazy(() => import('./views/base/spinners/Spinners'))
 const Hotels = React.lazy(() => import('./views/pages/hotels/Hotels'))
+const Customers = React.lazy(() => import('./views/pages/customers/Customers'))
 const Tooltips = React.lazy(() => import('./views/base/tooltips/Tooltips'))
 
 // Buttons
@@ -28,14 +29,21 @@ const ButtonGroups = React.lazy(() => import('./views/buttons/button-groups/Butt
 const Dropdowns = React.lazy(() => import('./views/buttons/dropdowns/Dropdowns'))
 
 //Forms
-const ChecksRadios = React.lazy(() => import('./views/forms/checks-radios/ChecksRadios'))
-const FloatingLabels = React.lazy(() => import('./views/forms/floating-labels/FloatingLabels'))
-const FormControl = React.lazy(() => import('./views/forms/form-control/FormControl'))
-const InputGroup = React.lazy(() => import('./views/forms/input-group/InputGroup'))
-const Layout = React.lazy(() => import('./views/forms/layout/Layout'))
-const Range = React.lazy(() => import('./views/forms/range/Range'))
-const Select = React.lazy(() => import('./views/forms/select/Select'))
-const Validation = React.lazy(() => import('./views/forms/validation/Validation'))
+const MediaEntertainment = React.lazy(() =>
+  import('./views/pages/complimentary_services/media-entertainment/MediaEntertainment'),
+)
+// routing for managing Complimentary services (Popular with Guest)
+const FormControl = React.lazy(() =>
+  import('./views/pages/complimentary_services/Popular-with-guests/GuestPopular'),
+)
+// End of the above routing
+const Other = React.lazy(() => import('./views/pages/complimentary_services/others/Other'))
+const Subscription = React.lazy(() => import('./views/pages/subscriptions/Subscription'))
+const AddSubscription = React.lazy(() => import('./views/pages/subscriptions/AddSubscription'))
+const Bathroom = React.lazy(() => import('./views/pages/complimentary_services/bathrooms/Bathroom'))
+const RoomFeature = React.lazy(() =>
+  import('./views/pages/complimentary_services/room-features/RoomFeature'),
+)
 
 const Charts = React.lazy(() => import('./views/charts/Charts'))
 
@@ -81,6 +89,15 @@ const routes = [
     // </PrivateRoute>
   },
 
+  {
+    path: '/customers',
+    name: 'Customers',
+    element:
+      // <PrivateRoute>
+      Customers,
+    // </PrivateRoute>
+  },
+
   { path: '/base/tooltips', name: 'Tooltips', element: Tooltips },
   { path: '/buttons', name: 'Buttons', element: Buttons, exact: true },
   { path: '/buttons/buttons', name: 'Buttons', element: Buttons },
@@ -88,14 +105,21 @@ const routes = [
   { path: '/buttons/button-groups', name: 'Button Groups', element: ButtonGroups },
   { path: '/charts', name: 'Charts', element: Charts },
   { path: '/forms', name: 'Forms', element: FormControl, exact: true },
-  { path: '/forms/form-control', name: 'Form Control', element: FormControl },
-  { path: '/forms/select', name: 'Select', element: Select },
-  { path: '/forms/checks-radios', name: 'Checks & Radios', element: ChecksRadios },
-  { path: '/forms/range', name: 'Range', element: Range },
-  { path: '/forms/input-group', name: 'Input Group', element: InputGroup },
-  { path: '/forms/floating-labels', name: 'Floating Labels', element: FloatingLabels },
-  { path: '/forms/layout', name: 'Layout', element: Layout },
-  { path: '/forms/validation', name: 'Validation', element: Validation },
+  {
+    path: '/complimentary-services/popular-with-guests',
+    name: 'Form Control',
+    element: FormControl,
+  },
+  { path: '/complimentary-services/room-feature', name: 'RoomFeature', element: RoomFeature },
+  {
+    path: '/complimentary-services/media-entertainment',
+    name: 'Media& Entertainment',
+    element: MediaEntertainment,
+  },
+  { path: '/complimentary-services/bathroom', name: 'Bathroom', element: Bathroom },
+  { path: '/complimentary-services/other', name: 'Other', element: Other },
+  { path: '/subscriptions', name: 'Subscription', element: Subscription },
+  { path: '/addsubscriptions', name: 'AddSubscription', element: AddSubscription },
   { path: '/icons', exact: true, name: 'Icons', element: CoreUIIcons },
   { path: '/icons/coreui-icons', name: 'CoreUI Icons', element: CoreUIIcons },
   { path: '/icons/flags', name: 'Flags', element: Flags },

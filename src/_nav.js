@@ -35,6 +35,16 @@ const _nav = [
     //   text: 'NEW',
     // },
   },
+  {
+    component: CNavItem,
+    name: 'Manage Customers',
+    to: '/customers',
+    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+    // badge: {
+    //   color: 'info',
+    //   text: 'NEW',
+    // },
+  },
   // {
   //   component: CNavTitle,
   //   name: 'Theme',
@@ -156,59 +166,44 @@ const _nav = [
   //     },
   //   ],
   // },
-  // {
-  //   component: CNavGroup,
-  //   name: 'Forms',
-  //   icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
-  //   items: [
-  //     {
-  //       component: CNavItem,
-  //       name: 'Form Control',
-  //       to: '/forms/form-control',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Select',
-  //       to: '/forms/select',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Checks & Radios',
-  //       to: '/forms/checks-radios',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Range',
-  //       to: '/forms/range',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Input Group',
-  //       to: '/forms/input-group',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Floating Labels',
-  //       to: '/forms/floating-labels',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Layout',
-  //       to: '/forms/layout',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Validation',
-  //       to: '/forms/validation',
-  //     },
-  //   ],
-  // },
-  // {
-  //   component: CNavItem,
-  //   name: 'Charts',
-  //   to: '/charts',
-  //   icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
-  // },
+  {
+    component: CNavGroup,
+    name: 'Complimentary Services',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Popular with Guests',
+        to: '/complimentary-services/popular-with-guests',
+      },
+      {
+        component: CNavItem,
+        name: 'Room Features',
+        to: '/complimentary-services/room-feature',
+      },
+      {
+        component: CNavItem,
+        name: 'media-entertainment',
+        to: '/complimentary-services/media-entertainment',
+      },
+      {
+        component: CNavItem,
+        name: 'Bathrooms',
+        to: '/complimentary-services/Bathroom',
+      },
+      {
+        component: CNavItem,
+        name: 'Others',
+        to: '/complimentary-services/other',
+      },
+    ],
+  },
+  {
+    component: CNavItem,
+    name: 'Subscriptions',
+    to: '/subscriptions',
+    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+  },
   // {
   //   component: CNavGroup,
   //   name: 'Icons',
