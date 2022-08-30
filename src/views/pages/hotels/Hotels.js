@@ -41,7 +41,7 @@ const Hotels = () => {
       let { data } = await api.get('admin/hotel', {
         params: {
           search,
-          limit: 5,
+          limit: 10,
           page: currentPage,
         },
       })
