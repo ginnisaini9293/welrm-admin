@@ -28,7 +28,7 @@ const Bathroom = () => {
         // },
       })
 
-      console.log('amenity', data.data.amenities)
+      // console.log('amenity', data.data.amenities)
       setServices(data.data.amenities)
       // setNumRows(data.data.hotels.numRows)
     } catch (error) {

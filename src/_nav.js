@@ -166,42 +166,48 @@ const _nav = [
   //     },
   //   ],
   // },
-  {
-    component: CNavGroup,
-    name: 'Complimentary Services',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Popular with Guests',
-        to: '/complimentary-services/popular-with-guests',
-      },
-      {
-        component: CNavItem,
-        name: 'Room Features',
-        to: '/complimentary-services/room-feature',
-      },
-      {
-        component: CNavItem,
-        name: 'media-entertainment',
-        to: '/complimentary-services/media-entertainment',
-      },
-      {
-        component: CNavItem,
-        name: 'Bathrooms',
-        to: '/complimentary-services/Bathroom',
-      },
-      {
-        component: CNavItem,
-        name: 'Others',
-        to: '/complimentary-services/other',
-      },
-    ],
-  },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Complimentary Services',
+  //   icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Popular with Guests',
+  //       to: '/complimentary-services/popular-with-guests',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Room Features',
+  //       to: '/complimentary-services/room-feature',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'media-entertainment',
+  //       to: '/complimentary-services/media-entertainment',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Bathrooms',
+  //       to: '/complimentary-services/Bathroom',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Others',
+  //       to: '/complimentary-services/other',
+  //     },
+  //   ],
+  // },
   {
     component: CNavItem,
     name: 'Subscriptions',
     to: '/subscriptions',
+    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Manage Amenities',
+    to: '/amenities',
     icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
   },
   // {

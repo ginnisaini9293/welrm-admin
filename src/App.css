@@ -10,11 +10,28 @@
     background-color: #0004 !important;
 }
 
-button.btn.btn-primary.delete_service {
-    margin-left: 8px;
+.sub-edit-link {
+    margin-right: 7px;
 }
 
 a.add_btn_subscription {
     margin-top: -15px;
     float: right;
+}
+
+
+.cust-dash-box {
+    background-color: #3399ff;
+    height: 160px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+.box-title{
+    font-size: 21px;
+    font-weight: 500;
+    text-decoration: inherit;
 }

@@ -39,6 +39,7 @@ const FormControl = React.lazy(() =>
 // End of the above routing
 const Other = React.lazy(() => import('./views/pages/complimentary_services/others/Other'))
 const Subscription = React.lazy(() => import('./views/pages/subscriptions/Subscription'))
+const Amenities = React.lazy(() => import('./views/pages/amenities/Amenities'))
 const AddSubscription = React.lazy(() => import('./views/pages/subscriptions/AddSubscription'))
 const Bathroom = React.lazy(() => import('./views/pages/complimentary_services/bathrooms/Bathroom'))
 const RoomFeature = React.lazy(() =>
@@ -119,7 +120,9 @@ const routes = [
   { path: '/complimentary-services/bathroom', name: 'Bathroom', element: Bathroom },
   { path: '/complimentary-services/other', name: 'Other', element: Other },
   { path: '/subscriptions', name: 'Subscription', element: Subscription },
+  { path: '/amenities', name: 'Amenities', element: Amenities },
   { path: '/addsubscriptions', name: 'AddSubscription', element: AddSubscription },
+  { path: '/addsubscriptions/:id', name: 'AddSubscription', element: AddSubscription },
   { path: '/icons', exact: true, name: 'Icons', element: CoreUIIcons },
   { path: '/icons/coreui-icons', name: 'CoreUI Icons', element: CoreUIIcons },
   { path: '/icons/flags', name: 'Flags', element: Flags },
